@@ -1,0 +1,42 @@
+{
+   // ===== Formatting =====
+   "editor.formatOnSave": true,
+   "editor.formatOnPaste": true,
+   "editor.formatOnType": true,
+
+   // Use Prettier as default formatter
+   "editor.defaultFormatter": "esbenp.prettier-vscode",
+   "[php]": {
+      "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+   },
+   "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+   "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+   "[css]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   },
+
+   // Prettier settings
+   "prettier.singleQuote": true,
+   "prettier.tabWidth": 3,
+   "prettier.useTabs": false,
+   "prettier.htmlWhitespaceSensitivity": "ignore",
+   "prettier.printWidth": 120,
+
+   // ===== Files =====
+   "files.autoSave": "off",
+   "files.insertFinalNewline": true,
+   "files.trimTrailingWhitespace": true,
+
+   // ===== Diff =====
+   "diffEditor.codeLens": true,
+   "prettier.insertPragma": false,
+   "intelephense.environment.includePaths": [
+      "C:/xampp/htdocs/velixtech/wp-includes",
+      "C:/xampp/htdocs/velixtech/wp-admin",
+      "C:/xampp/htdocs/velixtech/wp-content"
+   ]
+}
