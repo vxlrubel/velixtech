@@ -1,0 +1,16 @@
+{
+    "name": "velixtech/theme",
+    "description": "VelixTech WordPress theme with autoloading",
+    "type": "wordpress-theme",
+    "license": "GPL-2.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "VelixTech\\": "inc/"
+        }
+    },
+    "authors": [
+        {
+            "name": "VelixTech"
+        }
+    ]
+}
