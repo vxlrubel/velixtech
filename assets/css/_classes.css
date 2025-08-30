@@ -1,0 +1,4 @@
+.container {
+   width: var(--vx-container);
+   margin-inline: auto;
+}

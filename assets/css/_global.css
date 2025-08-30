@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+bodY {
+   font-family: var(--vx-font-base);
+   line-height: 1.6;
+   color: #374151;
+   background: #fff;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+input,
+select,
+textarea,
+button {
+   font: inherit;
+   color: inherit;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='search'],
+input[type='password'],
+textarea,
+select {
+   width: 100%;
+   padding: 0.65rem 0.8rem;
+   border: 1px solid #e5e7eb;
+   border-radius: 10px;
+   background: #fff;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+   outline: var(--vx-ring) solid rgba(31, 111, 235, 0.35);
+   outline-offset: 2px;
+}
+input[type='submit'],
+button {
+   cursor: pointer;
+}

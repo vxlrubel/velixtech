@@ -1,0 +1,51 @@
+:root {
+   /* Brand palette */
+   --vx-primary: hsl(202, 100%, 50%);
+   --vx-primary-600: hsl(202, 100%, 40%);
+   --vx-accent: #00b894;
+   --vx-dark: #0f172a;
+   --vx-muted: #64748b;
+   --vx-bg: #ffffff;
+
+   /* Typography */
+   --vx-font-base: 'Instrument Sans', sans-serif;
+   --vx-font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,
+      'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+   --vx-font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+   --vx-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+   /* Layout */
+   --vx-container: 100%;
+   --vx-radius: 16px;
+   --vx-ring: 2px;
+}
+
+@media (width >= 576px) {
+   :root {
+      --vx-container: 540px;
+   }
+}
+
+@media (width >= 768px) {
+   :root {
+      --vx-container: 720px;
+   }
+}
+
+@media (width >= 992px) {
+   :root {
+      --vx-container: 960px;
+   }
+}
+
+@media (width >= 1200px) {
+   :root {
+      --vx-container: 1140px;
+   }
+}
+
+@media (width >= 1400px) {
+   :root {
+      --vx-container: 1366px;
+   }
+}
