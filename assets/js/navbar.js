@@ -9,7 +9,6 @@ const Navbar = createApp({
    methods: {
       toggleMenu() {
          this.toggle = !this.toggle;
-         alert(this.toggle);
       },
    },
 });
