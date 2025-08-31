@@ -72,7 +72,7 @@ final class Theme
         $img_src = ASSETS . 'img/logo.png';
 
         printf(
-            '<a href="%s"><img src="%s" style="max-width: 120px;" alt="%s"></a>',
+            '<a href="%s" class="logo-link"><img src="%s" style="max-width: 120px;" alt="%s"></a>',
             esc_url(home_url()),
             esc_url($img_src),
             esc_attr(get_bloginfo('name'))
