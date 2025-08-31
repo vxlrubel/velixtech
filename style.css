@@ -20,3 +20,6 @@ Tags: custom-logo, custom-menu, one-column, two-columns, grid-layout, blog, port
   Base & Variables
 ====================================================================
 */
+[v-cloak] {
+   display: none;
+}
