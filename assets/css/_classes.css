@@ -1,4 +1,131 @@
 .container {
    width: var(--vx-container);
+   max-width: 100%;
    margin-inline: auto;
+   padding-inline: var(--vx-padding);
+}
+
+.text-center {
+   text-align: center;
+}
+.text-left {
+   text-align: left;
+}
+.text-right {
+   text-align: right;
+}
+.d-flex {
+   display: flex;
+}
+.align-items-center {
+   align-items: center;
+}
+.justify-content-center {
+   justify-content: center;
+}
+.justify-content-between {
+   justify-content: space-between;
+}
+
+/* display utilities  */
+.d-none {
+   display: none !important;
+}
+.d-block {
+   display: block !important;
+}
+.d-inline-block {
+   display: inline-block !important;
+}
+.d-flex {
+   display: flex !important;
+}
+.d-inline-flex {
+   display: inline-flex !important;
+}
+
+@media (width >= 576px) {
+   .d-sm-none {
+      display: none !important;
+   }
+   .d-sm-block {
+      display: block !important;
+   }
+   .d-sm-inline-block {
+      display: inline-block !important;
+   }
+   .d-sm-flex {
+      display: flex !important;
+   }
+   .d-sm-inline-flex {
+      display: inline-flex !important;
+   }
+}
+@media (width >= 768px) {
+   .d-md-none {
+      display: none !important;
+   }
+   .d-md-block {
+      display: block !important;
+   }
+   .d-md-inline-block {
+      display: inline-block !important;
+   }
+   .d-md-flex {
+      display: flex !important;
+   }
+   .d-md-inline-flex {
+      display: inline-flex !important;
+   }
+}
+@media (width >= 992px) {
+   .d-lg-none {
+      display: none !important;
+   }
+   .d-lg-block {
+      display: block !important;
+   }
+   .d-lg-inline-block {
+      display: inline-block !important;
+   }
+   .d-lg-flex {
+      display: flex !important;
+   }
+   .d-lg-inline-flex {
+      display: inline-flex !important;
+   }
+}
+@media (width >= 1200px) {
+   .d-xl-none {
+      display: none !important;
+   }
+   .d-xl-block {
+      display: block !important;
+   }
+   .d-xl-inline-block {
+      display: inline-block !important;
+   }
+   .d-xl-flex {
+      display: flex !important;
+   }
+   .d-xl-inline-flex {
+      display: inline-flex !important;
+   }
+}
+@media (width >= 1400px) {
+   .d-xxl-none {
+      display: none !important;
+   }
+   .d-xxl-block {
+      display: block !important;
+   }
+   .d-xxl-inline-block {
+      display: inline-block !important;
+   }
+   .d-xxl-flex {
+      display: flex !important;
+   }
+   .d-xxl-inline-flex {
+      display: inline-flex !important;
+   }
 }

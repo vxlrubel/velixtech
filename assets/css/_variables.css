@@ -6,18 +6,22 @@
    --vx-dark: #0f172a;
    --vx-muted: #64748b;
    --vx-bg: #ffffff;
+   --vx-overlay: hsla(0, 0%, 0%, 0.3);
+   --vx-red: #ff0054;
 
    /* Typography */
    --vx-font-base: 'Instrument Sans', sans-serif;
-   --vx-font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans,
-      'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
-   --vx-font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
-   --vx-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
    /* Layout */
    --vx-container: 100%;
    --vx-radius: 16px;
    --vx-ring: 2px;
+
+   /* padding */
+   --vx-padding: 1.25rem;
+
+   /* custom width */
+   --vx-logo-width: 120px;
 }
 
 @media (width >= 576px) {

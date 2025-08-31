@@ -1,0 +1,79 @@
+.primary-header {
+   --vx-height: 3.125rem;
+   height: var(--vx-height);
+   border-bottom: 1px solid var(--vx-muted);
+}
+.primary-header .container {
+   display: flex;
+   align-items: center;
+   height: 100%;
+}
+
+.primary-header .container .logo {
+   display: flex;
+   width: var(--vx-logo-width);
+   align-items: center;
+}
+.primary-header .container .navbar {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   width: calc(100% - var(--vx-logo-width));
+}
+.primary-header .container .navbar {
+   ul {
+      display: flex;
+      gap: var(--vx-padding);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+   }
+}
+.primary-header .container .logo img {
+   width: 100%;
+}
+
+/* mobile menu */
+.m-menu {
+   position: fixed;
+   inset: 0;
+   background: hsl(0, 0%, 100% / 0.2);
+   z-index: 1030;
+}
+@media (width >= 768px) {
+   .m-menu {
+      display: none;
+   }
+}
+.m-menu .overlay {
+   position: absolute;
+   inset: 0;
+   background: var(--vx-overlay);
+   z-index: 1028;
+}
+.m-menu .mobile-menu-parent {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 75%;
+   max-width: 300px;
+   height: 100dvh;
+   background: white;
+   padding: var(--vx-padding);
+   z-index: 1029;
+}
+.logo-link {
+   display: inline-flex;
+}
+button.toggle {
+   height: 35px;
+   width: 35px;
+   padding: 0;
+}
+.offcanvas.toggle {
+   background-color: transparent !important;
+   outline: none !important;
+   color: var(--vx-red) !important;
+   padding: 0;
+   justify-content: end;
+}
