@@ -13,6 +13,10 @@ class Assets
 
         // remove emoji script
         add_action('init', [$this, 'remove_emoji_script']);
+
+        add_action('admin_enqueue_scripts', [$this, 'enqueue_admin_script']);
+
+        add_filter('script_loader_tag', [$this, 'modify_script_type'], 10, 3);
     }
 
     public function remove_emoji_script()
@@ -92,5 +96,55 @@ class Assets
         ];
 
         return $scripts;
+    }
+
+
+    /**
+     * Enqueue admin script
+     * @since 1.0.0
+     * @return void
+     * @param string $hook_suffix
+     */
+    public function enqueue_admin_script($hook_suffix)
+    {
+        if ($hook_suffix === 'toplevel_page_velixtech') {
+            wp_enqueue_script(
+                'vue-js',
+                ASSETS . 'js/vue.global.prod.js',
+                [],
+                THEME_VERSION,
+                true
+            );
+            wp_enqueue_script(
+                'vue-router-js',
+                ASSETS . 'admin/js/vue-router.global.prod.min.js',
+                ['vue-js'],
+                THEME_VERSION,
+                true
+            );
+            wp_enqueue_script(
+                'velixtech-admin-script',
+                ASSETS . 'admin/js/custom.js',
+                ['vue-router-js'],
+                THEME_VERSION,
+                true
+            );
+        }
+    }
+
+    /**
+     * Modify script type to module
+     * @since 1.0.0
+     * @return string
+     * @param string $tag
+     * @param string $handle
+     * @param string $src
+     */
+    public function modify_script_type($tag, $handle, $src)
+    {
+        if ('velixtech-admin-script' === $handle) {
+            return '<script type="module" src="' . esc_url($src) . '"></script>';
+        }
+        return $tag;
     }
 }
