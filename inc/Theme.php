@@ -98,4 +98,16 @@ final class Theme
             'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
         ]);
     }
+
+    public function offcanvas_menu()
+    {
+        wp_nav_menu([
+            'theme_location' => 'offcanvas_menu',
+            'menu_class'     => 'offcanvas-menu',
+            'container'      => false,
+            'fallback_cb'    => false,
+            'depth'          => 1,
+            'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
+        ]);
+    }
 }

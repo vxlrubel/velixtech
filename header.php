@@ -43,9 +43,7 @@
         </div>
 
         <div class="m-menu" v-if="toggle">
-            <div class="overlay" :class="{
-                'show' : fade
-            }" @click="closeMenu"></div>
+            <div class="overlay" :class="{'show' : fade}" @click="closeMenu"></div>
             <div class="mobile-menu-parent" :class="{'show' : fade}">
                 <div class="d-flex align-items-center justify-content-between <?php echo is_admin_bar_showing() ? 'active-admin-bar' : ''; ?>">
                     <?php velixtech()->get_logo(); ?>
@@ -57,16 +55,10 @@
                         </button>
                     </span>
                 </div>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+
+                <?php velixtech()->offcanvas_menu(); ?>
             </div>
 
         </div>
-
-
 
     </header>
