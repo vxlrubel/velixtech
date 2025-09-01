@@ -65,6 +65,13 @@ final class Theme
         add_theme_support('title-tag');
         add_theme_support('post-thumbnails');
         add_theme_support('woocommerce');
+
+        // register text domain
+        load_theme_textdomain('velixtech', THEME_DIR . 'lang');
+
+        register_nav_menus([
+            'primary_menu' => esc_html__('Primary Menu', 'velixtech'),
+        ]);
     }
 
     public function get_logo()
@@ -77,5 +84,17 @@ final class Theme
             esc_url($img_src),
             esc_attr(get_bloginfo('name'))
         );
+    }
+
+    public function primary_menu()
+    {
+        wp_nav_menu([
+            'theme_location' => 'primary_menu',
+            'menu_class'     => 'd-none d-lg-flex',
+            'container'      => false,
+            'fallback_cb'    => false,
+            'depth'          => 1,
+            'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
+        ]);
     }
 }
