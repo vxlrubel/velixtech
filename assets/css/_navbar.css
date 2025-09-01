@@ -33,6 +33,24 @@
    width: 100%;
 }
 
+/* primary menu */
+.primary-menu {
+   a {
+      text-decoration: none;
+      color: var(--vx-dark);
+      font-weight: 500;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+
+      &:hover {
+         color: var(--vx-primary);
+      }
+   }
+   .current-menu-item a {
+      color: var(--vx-primary);
+   }
+}
 /* mobile menu */
 .m-menu {
    position: fixed;

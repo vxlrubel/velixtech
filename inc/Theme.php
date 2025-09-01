@@ -90,7 +90,7 @@ final class Theme
     {
         wp_nav_menu([
             'theme_location' => 'primary_menu',
-            'menu_class'     => 'd-none d-lg-flex',
+            'menu_class'     => 'd-none d-lg-flex primary-menu',
             'container'      => false,
             'fallback_cb'    => false,
             'depth'          => 1,
