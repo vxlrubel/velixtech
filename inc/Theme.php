@@ -24,6 +24,8 @@ final class Theme
         $this->define_constant();
 
         add_action('after_setup_theme', [$this, 'setup']);
+
+        add_action('admin_menu', [$this, 'admin_menu']);
     }
 
     /**
@@ -109,5 +111,23 @@ final class Theme
             'depth'          => 1,
             'items_wrap'     => '<ul class="%2$s">%3$s</ul>',
         ]);
+    }
+
+    public function admin_menu()
+    {
+        add_menu_page(
+            esc_html__('VelixTech', 'velixtech'),
+            esc_html__('VelixTech', 'velixtech'),
+            'manage_options',
+            'velixtech',
+            [$this, 'admin_page'],
+            'dashicons-admin-site',
+            3
+        );
+    }
+
+    public function admin_page()
+    {
+        echo '<div class="wrap" id="admin-app"><h1>Velixtech Admin Page</h1><p>Welcome to Velixtech settings!</p></div>';
     }
 }
