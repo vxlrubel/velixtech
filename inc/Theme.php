@@ -128,6 +128,6 @@ final class Theme
 
     public function admin_page()
     {
-        echo '<div class="wrap" id="admin-app"><h1>Velixtech Admin Page</h1><p>Welcome to Velixtech settings!</p></div>';
+        require_once THEME_DIR . 'inc/admin-menu-template.php';
     }
 }
