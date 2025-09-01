@@ -70,7 +70,8 @@ final class Theme
         load_theme_textdomain('velixtech', THEME_DIR . 'lang');
 
         register_nav_menus([
-            'primary_menu' => esc_html__('Primary Menu', 'velixtech'),
+            'primary_menu'   => esc_html__('Primary Menu', 'velixtech'),
+            'offcanvas_menu' => esc_html__('Offcanvas menu', 'velixtech'),
         ]);
     }
 
