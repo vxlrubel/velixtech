@@ -17,6 +17,18 @@ class Assets
         add_action('admin_enqueue_scripts', [$this, 'enqueue_admin_script']);
 
         add_filter('script_loader_tag', [$this, 'modify_script_type'], 10, 3);
+
+        add_action('admin_head', [$this, 'localize_admin_script']);
+    }
+
+    public function localize_admin_script()
+    {
+        echo '
+        <script type="text/javascript">
+            const velixtechData = {
+                themeUrl: "' . esc_url(THEME_URI . '/assets/admin/templates/') . '",
+            };
+        </script>';
     }
 
     public function remove_emoji_script()
