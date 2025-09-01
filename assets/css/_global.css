@@ -68,3 +68,9 @@ button:hover,
    background-color: var(--vx-primary-600);
    color: white;
 }
+img {
+   user-select: none;
+   max-width: 100%;
+   height: auto;
+   display: block;
+}
