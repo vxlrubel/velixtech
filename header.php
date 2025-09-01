@@ -19,8 +19,12 @@
 
                     <?php velixtech()->primary_menu(); ?>
 
+
+                    <?php echo get_option('admin_bar_front'); ?>
+
+
                     <div class="navbar-last-item d-lg-none">
-                        <button class="toggle" @click="toggleMenu">
+                        <button class="toggle" @click="openMenu">
                             <template v-if="!toggle">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
                                     <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
@@ -39,12 +43,14 @@
         </div>
 
         <div class="m-menu" v-if="toggle">
-            <div class="overlay" @click="toggle = false"></div>
-            <div class="mobile-menu-parent">
-                <div class="d-flex align-items-center justify-content-between">
+            <div class="overlay" :class="{
+                'show' : fade
+            }" @click="closeMenu"></div>
+            <div class="mobile-menu-parent" :class="{'show' : fade}">
+                <div class="d-flex align-items-center justify-content-between <?php echo is_admin_bar_showing() ? 'active-admin-bar' : ''; ?>">
                     <?php velixtech()->get_logo(); ?>
                     <span>
-                        <button class="toggle offcanvas" @click="toggleMenu">
+                        <button class="toggle offcanvas" @click="closeMenu">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
                                 <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                             </svg>
