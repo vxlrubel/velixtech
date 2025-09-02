@@ -1,7 +1,15 @@
 .primary-header {
-   --vx-height: 3.125rem;
-   height: var(--vx-height);
-   border-bottom: 1px solid var(--vx-muted);
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: var(--vx-navbar-height);
+   border-bottom: 1px solid var(--vx-border-color);
+   z-index: 1020;
+   background: white;
+}
+.header-space {
+   height: var(--vx-navbar-height);
 }
 .primary-header .container {
    display: flex;
@@ -133,4 +141,12 @@ button.toggle {
 
 .active-admin-bar {
    margin-top: 33px;
+}
+
+.main-content {
+   background-color: hsl(202, 100%, 95%);
+   min-height: calc(100dvh - var(--vx-navbar-height));
+   p {
+      margin-top: 0;
+   }
 }

@@ -41,7 +41,7 @@
                 </div>
             </div>
         </div>
-
+        <div class="header-space"></div>
         <div class="m-menu" v-if="toggle">
             <div class="overlay" :class="{'show' : fade}" @click="closeMenu"></div>
             <div class="mobile-menu-parent" :class="{'show' : fade}">

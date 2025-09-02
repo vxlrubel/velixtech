@@ -8,6 +8,7 @@
    --vx-bg: #ffffff;
    --vx-overlay: hsla(0, 0%, 0%, 0.3);
    --vx-red: #ff0054;
+   --vx-border-color: #dee2e6;
 
    /* Typography */
    --vx-font-base: 'Instrument Sans', sans-serif;
@@ -22,6 +23,9 @@
 
    /* custom width */
    --vx-logo-width: 120px;
+
+   /* height */
+   --vx-navbar-height: 3.125rem;
 }
 
 @media (width >= 576px) {

@@ -3,7 +3,7 @@
 
 
 <!-- this is the main content -->
-<main>
+<main class="main-content">
 
     <?php the_content(); ?>
 
