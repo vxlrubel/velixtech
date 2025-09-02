@@ -8,6 +8,9 @@
    z-index: 1020;
    background: white;
 }
+.primary-header.admin-toolbar {
+   top: var(--vx-admin-bar-height);
+}
 .header-space {
    height: var(--vx-navbar-height);
 }
@@ -144,9 +147,6 @@ button.toggle {
 }
 
 .main-content {
-   background-color: hsl(202, 100%, 95%);
+   background-color: #f7f6fc;
    min-height: calc(100dvh - var(--vx-navbar-height));
-   p {
-      margin-top: 0;
-   }
 }

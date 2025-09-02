@@ -1,13 +1,11 @@
 <!-- get header content -->
-<?php get_header(); ?>
+<?php
 
+// get header content
+get_header();
 
-<!-- this is the main content -->
-<main class="main-content">
+// get main content
+the_content();
 
-    <?php the_content(); ?>
-
-</main>
-
-<!-- get footer content -->
-<?php get_footer(); ?>
+// get footer content
+get_footer();

@@ -26,6 +26,7 @@
 
    /* height */
    --vx-navbar-height: 3.125rem;
+   --vx-admin-bar-height: 46px;
 }
 
 @media (width >= 576px) {
@@ -37,6 +38,11 @@
 @media (width >= 768px) {
    :root {
       --vx-container: 720px;
+   }
+}
+@media (width >= 783px) {
+   :root {
+      --vx-admin-bar-height: 32px;
    }
 }
 

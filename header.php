@@ -10,7 +10,7 @@
 
 <body <?php body_class(); ?>>
     <header id="navbar" v-cloak>
-        <div class="primary-header">
+        <div class="primary-header <?php echo is_admin_bar_showing() ? 'admin-toolbar' : ''; ?>">
             <div class="container">
                 <div class="logo">
                     <?php velixtech()->get_logo(); ?>
@@ -62,3 +62,4 @@
         </div>
 
     </header>
+    <main class="main-content">
