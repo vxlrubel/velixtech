@@ -3,7 +3,9 @@
 
 
 <!-- this is the main content -->
-<main id="app" v-cloak>
+<main>
+
+    <?php the_content(); ?>
 
 </main>
 
