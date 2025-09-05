@@ -11,6 +11,9 @@ class Assets
         // Frontend assets
         add_action('wp_enqueue_scripts', [$this, 'register_frontend_script']);
 
+        // conditional enqueue scripts
+        add_action('wp_enqueue_scripts', [$this, 'enqueue_conditional_script']);
+
         // remove emoji script
         add_action('init', [$this, 'remove_emoji_script']);
 
@@ -158,5 +161,23 @@ class Assets
             return '<script type="module" src="' . esc_url($src) . '"></script>';
         }
         return $tag;
+    }
+
+    /**
+     * Enqueue conditional style and script
+     *
+     * @return void
+     */
+    public function enqueue_conditional_script()
+    {
+        // this style for only home page
+        if (is_front_page() || is_home()) {
+            wp_enqueue_style(
+                'vx-home-style',
+                THEME_URI . 'assets/css/home.css',
+                [],
+                THEME_VERSION
+            );
+        }
     }
 }
